@@ -1,52 +1,59 @@
 body {
+    /* பக்கத்தின் மையத்தில் அட்டையை வைக்கிறது */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    
+    /* எழுத்துரு மற்றும் பின்புல நிறம் */
     font-family: 'Arial', sans-serif;
-    background-color: #ffddd2; /* Light festive background */
+    background-color: #ffddd2; /* வெளிர் பண்டிகை நிறம் (Light festive background) */
     text-align: center;
 }
 
 .birthday-card {
+    /* அட்டையின் தோற்றம் */
     background-color: #ffffff;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* நிழல் விளைவு */
     width: 90%;
     max-width: 450px;
 }
 
 h1 {
-    color: #e63946; /* A nice red color */
+    /* தலைப்புக்கான நிறம் */
+    color: #e63946; /* ஒரு அழகான சிவப்பு நிறம் */
     margin-bottom: 20px;
 }
 
 .message {
-    color: #1d3557; /* Dark blue text */
+    /* செய்தி உரைக்கான நிறம் மற்றும் அளவு */
+    color: #1d3557; /* அடர் நீல உரை */
     font-size: 1.1em;
     margin-bottom: 30px;
 }
 
 #surprise-button {
-    background-color: #457b9d; /* Blue button */
+    /* பட்டன் ஸ்டைல் */
+    background-color: #457b9d; /* நீல பட்டன் */
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* ஹோவர் விளைவுக்காக */
 }
 
 #surprise-button:hover {
-    background-color: #1d3557;
+    background-color: #1d3557; /* பட்டன் மீது மவுஸ் வரும்போது நிறம் மாறும் */
 }
 
-/* Style for the hidden message */
+/* JavaScript மூலம் மறைக்கப்படும் செய்திக்கான ஸ்டைல் */
 .hidden {
-    display: none;
+    display: none; /* ஆரம்பத்தில் மறைக்கவும் */
     margin-top: 20px;
     padding: 10px;
     border: 1px dashed #e63946;

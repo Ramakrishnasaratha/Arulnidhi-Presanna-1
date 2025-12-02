@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Get references to the button and the hidden message
+    // Get references to the button and the hidden message
     const surpriseButton = document.getElementById('surprise-button');
     const surpriseMessage = document.getElementById('surprise-message');
 
-    // 2. Add an event listener to the button
+    // Add an event listener to the button
     surpriseButton.addEventListener('click', () => {
-        // 3. Toggle the 'hidden' class to show/hide the message
+        // Toggle the 'hidden' class to show/hide the message
         
         // Check if the message is currently hidden
         if (surpriseMessage.classList.contains('hidden')) {
