@@ -1,54 +1,77 @@
+/* Background Animated Gradient */
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff7e5f);
+    height: 100vh;
     font-family: 'Poppins', sans-serif;
     color: #fff;
     text-align: center;
-    height: 100vh;
+    background: linear-gradient(135deg, #7f00ff, #e100ff);
+    background-size: 300% 300%;
+    animation: bgAnim 10s ease infinite;
+}
+
+@keyframes bgAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
     margin-top: 80px;
 }
 
+/* Title Glow Effect */
 .title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
 .title span {
-    color: #ffe066;
+    color: #fffa8b;
+    text-shadow: 0 0 15px #ffea52;
 }
 
 .quote {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-top: 10px;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
+/* Button Style */
 #wishBtn {
-    margin-top: 30px;
-    padding: 12px 30px;
-    background: #fff;
-    color: #ff5e78;
+    margin-top: 35px;
+    padding: 15px 35px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    color: #6a007d;
+    border-radius: 50px;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: 0.3s;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+    transition: 0.4s;
 }
 
 #wishBtn:hover {
-    background: #ffe9f0;
+    transform: scale(1.1);
+    opacity: 0.9;
 }
 
+/* Surprise Text */
 #surprise {
     margin-top: 30px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     display: none;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .show {
     display: block !important;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
