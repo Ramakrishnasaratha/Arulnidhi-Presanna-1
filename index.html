@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday — Arulnidhi Presanna!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scene">
+    <header class="header">
+      <h1 id="title">Happy Birthday</h1>
+      <p class="subtitle">இனிய பிறந்தநாள் வாழ்த்துக்கள் — <span id="name">Arulnidhi Presanna</span> 🎉</p>
+    </header>
+
+    <main class="card">
+      <div class="balloons">
+        <div class="balloon b1"></div>
+        <div class="balloon b2"></div>
+        <div class="balloon b3"></div>
+        <div class="balloon b4"></div>
+      </div>
+
+      <div class="message">
+        <h2 id="big-wish">Wishing you a day full of love & joy!</h2>
+        <p id="personal-line">May your year sparkle as bright as you do, Arulnidhi Presanna ✨</p>
+
+        <div class="controls">
+          <button id="celebrateBtn">Celebrate 🎉</button>
+          <button id="muteBtn">🔊 Sound</button>
+        </div>
+      </div>
+    </main>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <footer class="footer">
+      <small>Made with ❤ for Arulnidhi Presanna</small>
+    </footer>
+
+    <!-- optional short happy tune (base64-free silent fallback if browser blocks autoplay) -->
+    <audio id="tune" preload="auto">
+      <source src="" />
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
