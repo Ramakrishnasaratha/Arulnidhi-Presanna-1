@@ -1,77 +1,80 @@
-/* Background Animated Gradient */
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
     height: 100vh;
-    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40, #1c1c26);
     color: #fff;
+}
+
+/* Professional Card */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 50px;
+    border-radius: 20px;
     text-align: center;
-    background: linear-gradient(135deg, #7f00ff, #e100ff);
-    background-size: 300% 300%;
-    animation: bgAnim 10s ease infinite;
+    width: 90%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1.2s ease;
 }
 
-@keyframes bgAnim {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-.container {
-    margin-top: 80px;
-}
-
-/* Title Glow Effect */
-.title {
-    font-size: 2.8rem;
-    font-weight: 800;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-}
-
-.title span {
-    color: #fffa8b;
-    text-shadow: 0 0 15px #ffea52;
+.card h1 span {
+    color: #ffd86b;
 }
 
 .quote {
-    font-size: 1.3rem;
-    margin-top: 10px;
-    opacity: 0.95;
-}
-
-/* Button Style */
-#wishBtn {
-    margin-top: 35px;
-    padding: 15px 35px;
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-    border: none;
-    color: #6a007d;
-    border-radius: 50px;
     font-size: 1.1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
-    transition: 0.4s;
-}
-
-#wishBtn:hover {
-    transform: scale(1.1);
     opacity: 0.9;
+    margin-bottom: 25px;
 }
 
-/* Surprise Text */
+/* Premium Button */
+.btn {
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #ffd86b, #ffcc4d);
+    border: none;
+    color: #1e1e1e;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 217, 102, 0.4);
+}
+
+/* Surprise Message */
 #surprise {
-    margin-top: 30px;
-    font-size: 1.5rem;
+    margin-top: 25px;
+    font-size: 1.1rem;
+    line-height: 1.4;
     display: none;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .show {
     display: block !important;
 }
 
-/* Fade-in animation */
+/* Fade Animation */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
