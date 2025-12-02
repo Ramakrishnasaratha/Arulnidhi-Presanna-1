@@ -1,87 +1,122 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #1e1e2f, #2a2a40, #1c1c26);
-    color: #fff;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
 }
 
-/* Birthday Card Box */
-.card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 40px 50px;
-    border-radius: 20px;
-    text-align: center;
-    width: 90%;
-    max-width: 500px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-    animation: fadeIn 1.2s ease;
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
 }
 
-.card h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 15px;
+.logo {
+  font-size: 22px;
+  font-weight: 600;
 }
 
-.card h1 span {
-    color: #ffd86b;
+.nav-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #ffca28;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #ffb300;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.main-btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: #ff4081;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  background: #f50057;
+}
+
+/* WISH SECTION */
+.hidden {
+  display: none;
+}
+
+#wishSection {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.wish-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 50px 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.wish-box h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.wish-box span {
+  color: #ffde59;
 }
 
 .quote {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    margin-bottom: 25px;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
-/* Button */
-.btn {
-    padding: 12px 25px;
-    background: linear-gradient(90deg, #ffd86b, #ffcc4d);
-    border: none;
-    color: #1e1e1e;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: 0.3s ease;
+.from {
+  font-size: 18px;
+  opacity: 0.8;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 217, 102, 0.4);
-}
-
-/* Message Box */
-.birthday-msg {
-    display: none;
-    margin-top: 25px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    opacity: 0;
-    animation: fadeIn 0.8s ease forwards;
-    background: rgba(255,255,255,0.08);
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Show class */
-.show {
-    display: block !important;
-}
-
-/* Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }

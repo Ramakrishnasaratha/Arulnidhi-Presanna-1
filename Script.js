@@ -1,5 +1,6 @@
-document.getElementById("wishBtn").addEventListener("click", () => {
-    const msg = document.getElementById("surprise");
-    msg.classList.toggle("show");
-});
- git add .
+function showWish() {
+    document.getElementById("wishSection").classList.remove("hidden");
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+}
+
+document.getElementById("wishBtn").addEventListener("click", showWish);
