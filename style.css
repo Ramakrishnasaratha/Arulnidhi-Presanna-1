@@ -1,198 +1,56 @@
-/* Root theme color */
-:root {
-  --accent: #ff6ec7;
-  --bg: #fff7fb;
-  --card-bg: #ffffffcc;
-  --shadow: rgba(0, 0, 0, 0.15);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
 body {
-  background: var(--bg);
-  min-height: 100vh;
-  overflow-x: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffddd2; /* Light festive background */
+    text-align: center;
 }
 
-.card {
-  width: 90%;
-  max-width: 900px;
-  background: var(--card-bg);
-  backdrop-filter: blur(15px);
-  padding: 35px;
-  border-radius: 22px;
-  box-shadow: 0 8px 25px var(--shadow);
-  position: relative;
+.birthday-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
 }
 
-/* Canvas for confetti */
-#confettiCanvas {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 5;
+h1 {
+    color: #e63946; /* A nice red color */
+    margin-bottom: 20px;
 }
 
-.title {
-  font-size: 34px;
-  font-weight: 800;
-  color: var(--accent);
-  text-align: center;
-  margin-bottom: 16px;
+.message {
+    color: #1d3557; /* Dark blue text */
+    font-size: 1.1em;
+    margin-bottom: 30px;
 }
 
-#namePreview {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 20px;
-  opacity: 0.7;
+#surprise-button {
+    background-color: #457b9d; /* Blue button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  margin-bottom: 25px;
+#surprise-button:hover {
+    background-color: #1d3557;
 }
 
-.controls input,
-.controls button {
-  padding: 10px 16px;
-  border-radius: 10px;
-  border: 2px solid var(--accent);
-  font-size: 15px;
-}
-
-.controls button {
-  background: var(--accent);
-  color: #fff;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.controls button:hover {
-  transform: scale(1.06);
-}
-
-/* Candle & Cake */
-.cake-area {
-  text-align: center;
-  margin-top: 35px;
-}
-
-.cake {
-  width: 150px;
-  height: 90px;
-  background: #ffdadf;
-  border-radius: 10px;
-  margin: 0 auto;
-  position: relative;
-  box-shadow: 0 4px 15px #0002 inset;
-}
-
-#candle {
-  width: 14px;
-  height: 45px;
-  background: #ffe9aa;
-  position: absolute;
-  left: 50%;
-  top: -48px;
-  transform: translateX(-50%);
-  border-radius: 4px;
-  box-shadow: 0 0 8px #0003 inset;
-}
-
-#flame {
-  width: 18px;
-  height: 28px;
-  background: radial-gradient(circle at 50% 30%, #fff9b1, #ff7b00);
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  animation: flicker 0.18s infinite alternate;
-  filter: drop-shadow(0 0 8px #ff8a00);
-}
-
-@keyframes flicker {
-  from { transform: translateX(-50%) scale(1); }
-  to { transform: translateX(-48%) scale(1.1); }
-}
-
-/* Balloons */
-.balloon {
-  position: absolute;
-  border-radius: 50%;
-  z-index: 3;
-  opacity: 0.9;
-}
-
-.string {
-  position: absolute;
-  left: 50%;
-  bottom: -60px;
-  width: 2px;
-  height: 70px;
-  background: #444;
-}
-
-/* Message */
-.message-box {
-  margin-top: 25px;
-  padding: 18px;
-  background: #ffffff88;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 18px;
-  min-height: 60px;
-}
-
-#tw {
-  width: 100%;
-  word-break: break-word;
-}
-
-/* Theme color picker */
-#themeColor {
-  width: 55px;
-  height: 40px;
-  border-radius: 10px;
-  cursor: pointer;
-  border: none;
-}
-
-/* Inputs */
-input[type="text"],
-textarea {
-  width: 100%;
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 2px solid var(--accent);
-  margin-bottom: 12px;
-  font-size: 15px;
-}
-
-/* Range slider */
-#balloonRange {
-  width: 150px;
-}
-
-footer {
-  margin-top: 35px;
-  text-align: center;
-  opacity: 0.7;
-  font-size: 14px;
+/* Style for the hidden message */
+.hidden {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px dashed #e63946;
+    border-radius: 5px;
+    color: #e63946;
+    font-weight: bold;
 }

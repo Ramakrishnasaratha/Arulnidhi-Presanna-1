@@ -1,56 +1,26 @@
-<!doctype html>
-<canvas class="confettiCanvas" id="confettiCanvas"></canvas>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Arulnidhi Presanna!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="birthday-card">
+        <h1>🎉 Happy Birthday, Arulnidhi Presanna! 🎂</h1>
+        
+        <p class="message">
+            Wishing you a day filled with joy, laughter, and everything you love. May your year ahead be amazing!
+        </p>
+        
+        <button id="surprise-button">Click for a Surprise!</button>
+        
+        <p id="surprise-message" class="hidden">
+            **Arulnidhi Presanna**, a little bird told me you're having an incredible year! Keep shining brightly! ✨
+        </p>
+    </div>
 
-
-<div class="left">
-<h1 id="title">Happy Birthday!</h1>
-<p class="lead">A special, animated greeting just for you. Make a wish — then blow out the candles ✨</p>
-<div class="typewriter" id="tw"></div>
-
-
-<div class="cake-wrap" aria-hidden="false">
-<div class="cake" id="cake">
-<div class="layer bottom"></div>
-<div class="layer mid"></div>
-<div class="layer top"></div>
-<div class="candle" id="candle"></div>
-<div class="flame" id="flame"></div>
-</div>
-<div>
-<strong id="namePreview" style="font-size:20px">To: ArulnidhiPresanna</strong>
-<div style="margin-top:8px;color:#cfc8e6;">Make a wish and click <strong>Blow Candles</strong></div>
-</div>
-</div>
-
-
-<div class="buttons" role="toolbar" aria-label="Actions">
-<button id="blowBtn">Blow Candles</button>
-<button class="ghost" id="musicBtn">Play Melody</button>
-<button class="ghost" id="confettiBtn">Confetti</button>
-</div>
-</div>
-
-
-<aside class="right" aria-labelledby="settingsTitle">
-<h3 id="settingsTitle">Customise</h3>
-<div class="controls">
-<input class="input" id="nameInput" placeholder="Enter name (e.g., ArulnidhiPresanna)" aria-label="Name input">
-<input class="input" id="msgInput" placeholder="Short message (typewriter)" aria-label="Message input">
-<label style="font-size:13px;color:#cfc8e6">Balloon count: <span id="balloonCount">6</span></label>
-<input type="range" id="balloonRange" min="0" max="12" value="6">
-<label style="font-size:13px;color:#cfc8e6">Theme color</label>
-<input type="color" id="themeColor" value="#ff6b6b">
-</div>
-</aside>
-
-
-<footer>Interactive Birthday Card • Built with HTML, CSS & JS</footer>
-
-
-</div>
-</div>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
