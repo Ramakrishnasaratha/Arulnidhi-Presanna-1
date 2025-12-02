@@ -14,7 +14,7 @@ body {
     color: #fff;
 }
 
-/* Professional Card */
+/* Birthday Card Box */
 .card {
     background: rgba(255, 255, 255, 0.05);
     padding: 40px 50px;
@@ -43,7 +43,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Premium Button */
+/* Button */
 .btn {
     padding: 12px 25px;
     background: linear-gradient(90deg, #ffd86b, #ffcc4d);
@@ -61,19 +61,26 @@ body {
     box-shadow: 0 6px 20px rgba(255, 217, 102, 0.4);
 }
 
-/* Surprise Message */
-#surprise {
+/* Message Box */
+.birthday-msg {
+    display: none;
     margin-top: 25px;
     font-size: 1.1rem;
-    line-height: 1.4;
-    display: none;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
+/* Show class */
 .show {
     display: block !important;
 }
 
-/* Fade Animation */
+/* Animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }

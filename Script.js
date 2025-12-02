@@ -1,3 +1,5 @@
 document.getElementById("wishBtn").addEventListener("click", () => {
-    document.getElementById("surprise").classList.toggle("show");
+    const msg = document.getElementById("surprise");
+    msg.classList.toggle("show");
 });
+ git add .
