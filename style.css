@@ -1,122 +1,68 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+:root{
+--accent:#ff6b6b;
+--accent2:#ffd166;
+--glass: rgba(255,255,255,0.06);
+color-scheme: dark;
+font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Noto Sans', sans-serif;
+}
+html,body{height:100%;margin:0;background:radial-gradient(circle at 10% 10%, #1a1330 0%, var(--bg) 45%, #05030a 100%);}
+.wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
+
+
+.card{
+width:960px;max-width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+border-radius:20px; padding:32px; box-shadow:0 10px 30px rgba(2,2,8,0.6); position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.03);
+display:grid; grid-template-columns: 1fr 380px; gap:24px; align-items:center;
 }
 
-body {
-  background: linear-gradient(135deg, #4e54c8, #8f94fb);
-  color: white;
-}
 
-/* NAVIGATION */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 40px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  position: sticky;
-  top: 0;
-}
+/* Left area */
+.left{padding:12px}
+h1{margin:0;font-size:46px;letter-spacing:-1px}
+p.lead{margin:8px 0 18px;color:#cfc8e6;opacity:0.9}
 
-.logo {
-  font-size: 22px;
-  font-weight: 600;
-}
 
-.nav-btn {
-  padding: 10px 20px;
-  border: none;
-  background: #ffca28;
-  color: black;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+.typewriter{font-weight:600;font-size:20px;min-height:26px}
 
-.nav-btn:hover {
-  background: #ffb300;
-}
 
-/* HERO SECTION */
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-}
+.buttons{display:flex;gap:12px;margin-top:18px}
+button{background:linear-gradient(90deg,var(--accent),var(--accent2));border:none;padding:10px 14px;border-radius:12px;color:#111;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(255,107,107,0.12);}
+button.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#ddd;box-shadow:none}
 
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
 
-.hero p {
-  font-size: 18px;
-  opacity: 0.9;
-}
+/* Cake */
+.cake-wrap{display:flex;align-items:center;gap:18px;margin-top:26px}
+.cake{width:220px;height:160px;position:relative}
+.cake .layer{position:absolute;left:0;right:0;margin:auto;border-radius:18px}
+.cake .layer.bottom{bottom:6px;height:76px;width:200px;background:linear-gradient(180deg,#ff9a9e,#ff6b6b)}
+.cake .layer.mid{bottom:52px;height:54px;width:180px;background:linear-gradient(180deg,#ffd1a9,#ffd166)}
+.cake .layer.top{bottom:92px;height:40px;width:160px;background:linear-gradient(180deg,#fff1f1,#ffe6b3)}
+.candle{position:absolute; left:50%; transform:translateX(-50%); bottom:128px; width:8px; height:28px; background:#ffcccb; border-radius:4px}
+.flame{position:absolute; left:50%; transform:translateX(-50%); bottom:156px; width:10px;height:18px;border-radius:50% 50% 40% 40%; background: radial-gradient(circle at 30% 30%, #fff 0%, #ffd166 18%, #ff6b6b 65%); filter:drop-shadow(0 6px 6px rgba(255,140,90,0.25)); animation:flicker 1s infinite}
+@keyframes flicker{0%{transform:translateX(-50%) scaleY(1)}50%{transform:translateX(-50%) scaleY(0.92)}100%{transform:translateX(-50%) scaleY(1)} }
 
-.main-btn {
-  margin-top: 25px;
-  padding: 12px 30px;
-  background: #ff4081;
-  border: none;
-  color: white;
-  font-size: 18px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-}
 
-.main-btn:hover {
-  background: #f50057;
-}
+/* Right panel */
+.right{padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px}
+.right h3{margin:6px 0 12px}
+.controls{display:flex;flex-direction:column;gap:12px}
+.input{padding:10px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:#fff}
 
-/* WISH SECTION */
-.hidden {
-  display: none;
-}
 
-#wishSection {
-  text-align: center;
-  padding: 80px 20px;
-}
+/* Floating balloons */
+.balloon{position:absolute;border-radius:50%;width:72px;height:96px;opacity:0.98;display:flex;align-items:center;justify-content:center}
+.string{position:absolute;bottom:-90px;width:2px;height:90px;background:linear-gradient(180deg,#fff0,#fff1);left:50%;transform:translateX(-50%)}
 
-.wish-box {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 50px 25px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 600px;
-  margin: auto;
-  backdrop-filter: blur(10px);
-  animation: fadeIn 1.2s ease-in-out;
-}
 
-.wish-box h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
+/* Confetti canvas */
+canvas.confettiCanvas{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}
 
-.wish-box span {
-  color: #ffde59;
-}
 
-.quote {
-  font-size: 20px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  font-style: italic;
-}
+footer{position:absolute;left:16px;bottom:16px;color:#999;font-size:12px}
 
-.from {
-  font-size: 18px;
-  opacity: 0.8;
-}
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+@media (max-width:880px){
+.card{grid-template-columns:1fr;}
+.cake{display:none}
+.right{order:2}
 }
